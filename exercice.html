@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -96,3 +95,103 @@ function toggle(id) {
 
 </body>
 </html>
+``
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Exercices CCPU</title>
+
+<style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f5f5f5; }
+    header { background:#002b5c; color:white; padding:20px; text-align:center; }
+    nav { background:#014a9c; padding:12px; text-align:center; }
+    nav a { color:white; margin:0 18px; text-decoration:none; font-weight:bold; }
+    nav a:hover { text-decoration:underline; }
+    main { width:90%; margin:20px auto; background:white; padding:30px; border-radius:8px; }
+    h1 { color:#002b5c; }
+    .exercice { background:#eef4ff; padding:15px; border-left:5px solid #014a9c; margin-bottom:20px; }
+    .correction { background:#e8ffe8; padding:15px; border-left:5px solid #0a8c0a; display:none; }
+    button { background:#014a9c; color:white; border:none; padding:10px 16px; border-radius:8px; cursor:pointer; }
+    button:hover { background:#013d83; }
+</style>
+
+<script>
+function toggle(id) {
+    var c = document.getElementById(id);
+    c.style.display = (c.style.display === "none") ? "block" : "none";
+}
+</script>
+</head>
+
+<body>
+
+<header>
+    <h1>Exercices CCPU – Entraînement complet</h1>
+</header>
+
+<nav>
+    index.htmlCours complet</a>
+    cours.htmlLeçon</a>
+    exercices.htmlExercices</a>
+    revision.htmlRévision</a>
+    telechargements.htmlTéléchargements</a>
+</nav>
+
+<main>
+
+<h2>🧪 Exercices chimie</h2>
+
+<div class="exercice">
+    <p><strong>Exercice 1 :</strong> C = 0.27 % ; norme max = 0.24 %. Conforme ?</p>
+    <button onclick="toggle('corr1')">Afficher / Cacher correction</button>
+    <div id="corr1" class="correction">
+        ❌ Non conforme : le carbone dépasse la limite.
+    </div>
+</div>
+
+<div class="exercice">
+    <p><strong>Exercice 2 :</strong> Mn mesuré = 1.45 % ; norme 1.10–1.60 %. Conforme ?</p>
+    <button onclick="toggle('corr2')">Afficher / Cacher correction</button>
+    <div id="corr2" class="correction">
+        ✔ Conforme.
+    </div>
+</div>
+
+<h2>⚙️ Exercices mécaniques</h2>
+
+<div class="exercice">
+    <p><strong>Exercice 3 :</strong> Rm = 462 MPa pour S355JR (norme 470–630). Conforme ?</p>
+    <button onclick="toggle('corr3')">Afficher / Cacher correction</button>
+    <div id="corr3" class="correction">
+        ❌ Non conforme : Rm trop faible.
+    </div>
+</div>
+
+<h2>🔥 Exercices traçabilité</h2>
+
+<div class="exercice">
+    <p><strong>Exercice 4 :</strong> Le CCPU indique Coulée 59842 / Lot 15487 / SN 001–014. Problème ?</p>
+    <button onclick="toggle('corr4')">Afficher / Cacher correction</button>
+    <div id="corr4" class="correction">
+        ✔ Cohérent si toutes les pièces appartiennent au même lot et à la même coulée.
+    </div>
+</div>
+
+<h2>📘 Exercices CCPU complet</h2>
+
+<div class="exercice">
+    <p><strong>Exercice 5 :</strong> Le CCPU montre une nuance S355J2 mais la commande demande S355JR. Conforme ?</p>
+    <button onclick="toggle('corr5')">Afficher / Cacher correction</button>
+    <div id="corr5" class="correction">
+        ❌ Non conforme : nuance différente.
+    </div>
+</div>
+
+</main>
+
+</body>
+</html>
+``
+
